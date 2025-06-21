@@ -28,7 +28,7 @@ import { onMounted, ref } from 'vue';
 import router from '../router'
 import axios from 'axios'
 
-const BASEURL = 'http://103.153.2.114:8001/api'
+const BASEURL = import.meta.env.VITE_BASE_URL
 
 const data = ref({email: '', password:''})
 

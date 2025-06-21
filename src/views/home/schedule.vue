@@ -29,11 +29,11 @@ import axios from 'axios'
 import { onMounted,ref } from 'vue'
 
 const schedule = ref()
-const BASEURL = 'http://localhost:8001/api'
+const BASEURL = import.meta.env.VITE_BASE_URL
 const token = localStorage.getItem('api-token')
 
 onMounted(async () => {
-    const sched = await axios.get(`${BASEURL}/schedule`,{
+    const sched = await axios.get(`${BASEURL}/api/schedule`,{
         headers:{
             'Authorization':`Bearer ${token}`
         }

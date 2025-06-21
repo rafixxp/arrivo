@@ -198,7 +198,7 @@ const masuk = async () => {
     alert('Gambar tidak ada !')
   }
   
-  const response = await axios.post(`${BASEURL}/attendance/clock-in`, { 'clock-in':file }, {
+  const response = await axios.post(`${BASEURL}/api/attendance/clock-in`, { 'clock-in':file }, {
     headers:{
       "Content-Type":"application/json",
       "Authorization":`Bearer ${token}`
@@ -227,7 +227,7 @@ const pulang = async () => {
     alert('Gambar tidak ada !')
   }
 
-  const response = await axios.post(`${BASEURL}/attendance/clock-out`, { 'clock-out':file }, {
+  const response = await axios.post(`${BASEURL}/api/attendance/clock-out`, { 'clock-out':file }, {
     headers:{
       "Content-Type":"application/json",
       "Authorization":`Bearer ${token}`
